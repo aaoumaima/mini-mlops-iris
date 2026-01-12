@@ -1,0 +1,19 @@
+# Configuration Render pour déploiement cloud
+# Documentation: https://render.com/docs
+
+services:
+  - type: web
+    name: iris-api
+    env: python
+    buildCommand: pip install -r requirements-docker.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PORT
+        value: 8000
+    healthCheckPath: /health
+    disk:
+      name: models-disk
+      mountPath: /app/models
+      sizeGB: 1

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+
+# Data (ne pas copier les données brutes dans l'image)
+data/raw/
+data/processed/
+
+# MLflow (sera monté en volume)
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Documentation
+*.md
+!README.md
+
+# Autres
+.DS_Store
+*.log
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Fichiers temporaires
+notepad*
+*.txt.bak
+
+# Fichiers de déploiement cloud (optionnels)
+render.yaml
+railway.json
+Procfile
+runtime.txt

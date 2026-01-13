@@ -37,6 +37,9 @@ jobs:
     
     - name: Test API imports
       run: |
+        # Create dummy model file for import test
+        mkdir -p models
+        python -c "import joblib; from sklearn.linear_model import LogisticRegression; from sklearn.pipeline import Pipeline; from sklearn.preprocessing import StandardScaler; pipe = Pipeline([('scaler', StandardScaler()), ('clf', LogisticRegression())]); joblib.dump(pipe, 'models/best_model.joblib')"
         python -c "from api.main import app; print('✅ API imports OK')"
     
     - name: Test training scripts imports

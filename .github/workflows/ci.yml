@@ -28,7 +28,7 @@ jobs:
     
     - name: Check code formatting
       run: |
-        black --check api/ src/
+        black --check --diff api/ src/ || (echo "❌ Code formatting check failed. Run 'black api/ src/' to fix." && exit 1)
     
     - name: Lint with flake8
       run: |

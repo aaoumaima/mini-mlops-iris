@@ -6,6 +6,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, f1_score
 
+# Set MLflow tracking URI to use local file system
+mlflow.set_tracking_uri("sqlite:///mlflow.db")
+mlflow.set_experiment("iris-optuna-runs")
+
 X, y = load_iris(return_X_y=True)
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42

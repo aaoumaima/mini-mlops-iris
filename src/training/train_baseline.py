@@ -22,22 +22,26 @@ def build_model(model_name: str, C: float, kernel: str):
     else:
         raise ValueError("model must be 'logreg' or 'svm'")
 
-    pipe = Pipeline([
-        ("scaler", StandardScaler()),
-        ("clf", clf)
-    ])
+    pipe = Pipeline([("scaler", StandardScaler()), ("clf", clf)])
     return pipe
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", type=str, default="logreg", choices=["logreg", "svm"])
+    parser.add_argument(
+        "--model", type=str, default="logreg", choices=["logreg", "svm"]
+    )
     parser.add_argument("--C", type=float, default=1.0)
-    parser.add_argument("--kernel", type=str, default="rbf", choices=["linear", "rbf", "poly", "sigmoid"])
+    parser.add_argument(
+        "--kernel",
+        type=str,
+        default="rbf",
+        choices=["linear", "rbf", "poly", "sigmoid"],
+    )
     args = parser.parse_args()
 
     iris = load_iris()
-    X = iris.data              # ✅ 4 features
+    X = iris.data  # ✅ 4 features
     y = iris.target
 
     X_train, X_test, y_train, y_test = train_test_split(
@@ -68,7 +72,9 @@ def main():
         os.makedirs("models", exist_ok=True)
         joblib.dump(pipe, "models/best_model.joblib")
 
-        print(f"✅ {args.model} | C={args.C} | kernel={args.kernel} | acc={acc:.4f} | f1={f1:.4f}")
+        print(
+            f"✅ {args.model} | C={args.C} | kernel={args.kernel} | acc={acc:.4f} | f1={f1:.4f}"
+        )
 
 
 if __name__ == "__main__":

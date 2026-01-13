@@ -11,6 +11,7 @@ X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
+
 def objective(trial):
     C = trial.suggest_float("C", 0.01, 10.0, log=True)
     kernel = trial.suggest_categorical("kernel", ["linear", "rbf"])
@@ -30,6 +31,7 @@ def objective(trial):
         mlflow.sklearn.log_model(model, "model")
 
     return f1
+
 
 study = optuna.create_study(direction="maximize")
 study.optimize(objective, n_trials=10)

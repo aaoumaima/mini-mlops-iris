@@ -1,14 +1,14 @@
-# 🌸 Mini-Projet MLOps - Classification Iris
+#  Mini-Projet MLOps - Classification Iris
 
 Pipeline MLOps complet pour la classification de fleurs Iris (setosa, versicolor, virginica) en utilisant les bonnes pratiques industrielles.
 
-## 🎯 Objectif du projet
+##  Objectif du projet
 
 Mettre en place un pipeline MLOps complet pour un modèle de Machine Learning, depuis les données jusqu'au déploiement, en utilisant les bonnes pratiques industrielles.
 
 Le modèle prédit la classe de la fleur Iris à partir de ses caractéristiques (sepal_length, sepal_width, petal_length, petal_width).
 
-## 🧩 Technologies utilisées
+##  Technologies utilisées
 
 - **Python 3.11** - Langage de programmation
 - **Scikit-learn** - Modèles ML (Logistic Regression, SVM)
@@ -19,7 +19,7 @@ Le modèle prédit la classe de la fleur Iris à partir de ses caractéristiques
 - **Git** - Versioning du code
 - **DVC + MinIO** - Versioning des données
 
-## 📁 Structure du projet
+##  Structure du projet
 
 ```
 mini-mlops-iris/
@@ -52,7 +52,7 @@ mini-mlops-iris/
 └── QUICK_START.md                # Guide de démarrage rapide
 ```
 
-## 🔄 Architecture du pipeline MLOps
+##  Architecture du pipeline MLOps
 
 ### Vue d'ensemble du pipeline
 
@@ -139,7 +139,7 @@ mini-mlops-iris/
 └─────────────────────────────────────────────────────────────┘
 ```
 
-## 🚀 Installation et utilisation
+##  Installation et utilisation
 
 ### Prérequis
 
@@ -230,7 +230,7 @@ curl -X POST "http://localhost:8000/predict" \
   }'
 ```
 
-## 🐳 Déploiement avec Docker
+##  Déploiement avec Docker
 
 ### Build et lancement avec Docker Compose
 
@@ -312,7 +312,7 @@ Effectue une prédiction de classe Iris.
 - `1` : versicolor
 - `2` : virginica
 
-## 📝 Commandes utiles
+##  Commandes utiles
 
 ### MLflow
 
@@ -352,28 +352,28 @@ dvc push  # Push vers MinIO (si configuré)
 
 > "J'ai réalisé un mini-projet MLOps complet incluant la gestion des données avec DVC, le suivi des expériences avec MLflow, l'optimisation avec Optuna et le déploiement d'un modèle via une API FastAPI, le tout versionné avec Git et conteneurisé avec Docker."
 
-## ✅ Fonctionnalités implémentées
+##  Fonctionnalités implémentées
 
 ### Core MLOps
-- ✅ Structure MLOps complète et organisée
-- ✅ Versioning des données (DVC + MinIO)
-- ✅ Entraînement de modèles baseline (Logistic Regression, SVM)
-- ✅ Tracking des expériences (MLflow)
-- ✅ Optimisation des hyperparamètres (Optuna)
+- Structure MLOps complète et organisée
+- Versioning des données (DVC + MinIO)
+- Entraînement de modèles baseline (Logistic Regression, SVM)
+-  Tracking des expériences (MLflow)
+-  Optimisation des hyperparamètres (Optuna)
 
 ### Déploiement
-- ✅ API REST de prédiction (FastAPI)
-- ✅ Conteneurisation (Docker)
-- ✅ Orchestration (Docker Compose avec API + MLflow)
-- ✅ Configuration cloud (Render, Railway, Heroku)
+-  API REST de prédiction (FastAPI)
+-  Conteneurisation (Docker)
+- Orchestration (Docker Compose avec API + MLflow)
+-  Configuration cloud (Render, Railway, Heroku)
 
 ### Documentation
-- ✅ README complet avec architecture
-- ✅ Guide de vérification (VERIFICATION.md)
-- ✅ Guide de démarrage rapide (QUICK_START.md)
-- ✅ Schémas du pipeline MLOps
+-  README complet avec architecture
+-  Guide de vérification (VERIFICATION.md)
+-  Guide de démarrage rapide (QUICK_START.md)
+-  Schémas du pipeline MLOps
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Le modèle n'est pas trouvé
 
@@ -393,7 +393,7 @@ Vérifiez que Docker est bien lancé :
 docker ps
 ```
 
-## ☁️ Déploiement Cloud (Bonus)
+##  Déploiement Cloud (Bonus)
 
 Le projet inclut des configurations pour le déploiement sur différentes plateformes cloud.
 
@@ -446,7 +446,7 @@ Pour tous les déploiements cloud, assurez-vous de :
 - Inclure le modèle `best_model.joblib` dans l'image Docker
 - Configurer les volumes persistants si nécessaire (pour MLflow)
 
-## 📚 Ressources
+##  Ressources
 
 - [MLflow Documentation](https://mlflow.org/docs/latest/index.html)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
@@ -455,7 +455,7 @@ Pour tous les déploiements cloud, assurez-vous de :
 - [Render Documentation](https://render.com/docs)
 - [Railway Documentation](https://docs.railway.app/)
 
-## 📄 Licence
+##  Licence
 
 Ce projet est un projet éducatif.
 

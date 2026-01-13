@@ -272,7 +272,7 @@ Lorsque vous lancez `docker compose up`, deux services sont disponibles :
   - Visualisation des métriques et paramètres
   - Comparaison des modèles
 
-## 📊 Endpoints de l'API
+##  Endpoints de l'API
 
 ### `GET /health`
 
@@ -348,7 +348,7 @@ dvc add data/raw/iris.csv
 dvc push  # Push vers MinIO (si configuré)
 ```
 
-## 🎓 Présentation du projet
+##  Présentation du projet
 
 > "J'ai réalisé un mini-projet MLOps complet incluant la gestion des données avec DVC, le suivi des expériences avec MLflow, l'optimisation avec Optuna et le déploiement d'un modèle via une API FastAPI, le tout versionné avec Git et conteneurisé avec Docker."
 
